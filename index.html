@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        --background: #dbe3fa;
+        --gray: #efefef;
+        --gray1: #efefef;
+        --primary: #29283f;
+        --primary-violet: #7370f4;
+      }
+      body {
+        background-color: var(--background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+
+        font-size: 16px;
+        font-family: poppins, sans-serif;
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-radius: 24px;
+        background-color: white;
+        cursor: pointer;
+        overflow: hidden;
+        max-width: clamp(320px, 70vw, 740px);
+        min-width: 320px;
+        min-height: 280px;
+      }
+
+      .cord:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .background {
+        display: flex;
+        background: yellow;
+        flex: 1 1 250px;
+      }
+      .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .content {
+        flex: 3 1 350px;
+        display: flex;
+        flex-direction: column;
+        justify-self: start;
+        padding: 16px;
+      }
+
+      .content > h2 {
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+        font-weight: 700;
+        margin-bottom: clamp(0.35rem, 2vw, 0.55rem);
+      }
+      .content > p {
+        font-size: clamp(1rem, 1.75vw, 1.2em);
+        font-weight: 400;
+        margin: 6px 0;
+      }
+
+      .content a {
+        color: var(--primary-violet);
+      }
+      .chips {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 12px 0px 16px 0px;
+      }
+
+      .chip {
+        border-radius: 12px;
+        padding: 10px;
+        font-size: 15px;
+        background-color: var(--gray1);
+        transition: all 0.3s;
+        font-weight: 500;
+      }
+      .chip:hover {
+        color: var(--gray);
+        background: var(--color-bg);
+      }
+      .action-bottons {
+        border-top: 1px solid var(--gray);
+        padding-top: 16px;
+        gap: 12px;
+        display: flex;
+        margin-top: auto;
+        flex-wrap: wrap;
+      }
+      .action-bottons a {
+        background-color: var(--primary);
+        color: white;
+        padding: 12px;
+        text-decoration: none;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        flex: 1 0 240px;
+        max-width: 100%;
+      }
+      .action-bottons a:hovar {
+        text-decoration: underline;
+      }
+      .action-bottons a.secondary {
+        background-color: inherit;
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        flex: 1 0 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article class="card">
+        <div class="background">
+          <img
+            src="https://raw.githubusercontent.com/vishalkubhakar/vishal-prage/main/images/vishal-img.jpeg"
+            alt="profile"
+          />
+        </div>
+        <div class="content">
+          <h2>Vishal Kumhar &#128681;</h2>
+          <p>
+            Senior full-stock engineer at
+            <a href="https://google.com" title="Google">Google</a>
+          </p>
+          <p>Helping with;</p>
+          <ul class="chips">
+            <li style="--color-bg: darkgreen" class="chip">Node.js</li>
+            <li style="--color-bg: rgb(0, 0, 107)" class="chip">React.js</li>
+            <li style="--color-bg: yellow; --gray: #000000" class="chip">
+              javascript
+            </li>
+            <li style="--color-bg: green" class="chip">Mongo Db</li>
+            <li style="--color-bg: rgb(189, 53, 22)" class="chip">HTML</li>
+            <li style="--color-bg: rgb(0, 0, 107)" class="chip">CSS</li>
+            <li style="--color-bg: rgb(158, 22, 189)" class="chip">
+              Bootstrap
+            </li>
+          </ul>
+          <div class="action-bottons">
+            <a href="#book-a-mentor" title="Book a lector">Book a lector</a>
+            <a href="#learn-more" class="secondary" title="Learn More"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
